@@ -7,6 +7,14 @@
  */
 const getSumOfTriple = (arr, start, end) => {
   // 请实现……
+  let newArr = {}
+  if (start !== undefined && end !== undefined) {
+    newArr = arr.filter(currentValue => ((currentValue > start && currentValue < end) && (currentValue % 3 === 0)))
+  } else {
+    newArr = arr.filter(currentValue => currentValue % 3 === 0)
+  }
+  const sum = newArr.reduce((sum, currentValue) => sum + currentValue, 0)
+  return sum
 };
 
 // * ---------------- 实现的效果：

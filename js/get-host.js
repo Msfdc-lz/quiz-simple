@@ -5,6 +5,9 @@
  */
 const getHostName = (url) => {
   // 请实现……
+  const urlReg = "(?<=//|)((\\w)+\\.)+\\w+";
+  const host = url.match(urlReg);
+  return ((host != null && host.length > 0) ? host[0] : "");
 };
 
 // * ---------------- 实现的效果：

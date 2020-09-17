@@ -3,6 +3,16 @@
 
 // * ---------------- 解决下文中缺少 clone 函数的问题……
 // 在这里写代码……
+function clone(data) {
+  if (typeof data != "object") {
+    return data
+  }
+  var obj = {};
+  for (var key in data) {
+    obj[key] = clone(data[key])
+  }
+  return obj;
+}
 
 // * ---------------- 实现的效果：
 

@@ -10,9 +10,18 @@ Git 是一个广泛使用的版本管理工具，适合团队开发。
 请直接在这里作答。
 
 答：
+   git clone repo-URL
+   git switch -c new-branch
+   git add .
+   git commit
+   git push origin new-branch
 
 ## Q2
 
 你知道和用过哪些 Git 的方法论和技巧
 
-答：
+答：给常用的命令起别名, 如:
+    git config --global alias.st status
+	  git config --global alias.co checkout
+	  git config --global alias.ci commit
+	  git config --global alias.br branch

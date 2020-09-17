@@ -19,6 +19,9 @@
 > 禁止使用 var，不可变数据用 const 声明，可变数据用 let 声明。
 
 答：
+  尽量不使用双等号
+  用逻辑或来设置变量的默认值
+  条件判断时, 不使用关系运算符, 直接进行判断
 
 ## 请问以下代码做了什么事情
 
@@ -28,4 +31,4 @@ const getLoglevel = () => {
 };
 ```
 
-答：
+答：给localStorage.loglevel设置默认值: 判断Storage中loglevel值是否为null或undefined, 是则返回默认值; 不是则返回loglevel的值
